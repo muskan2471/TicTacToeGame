@@ -12,6 +12,8 @@ public class MainClass
 	Scanner sc=new Scanner(System.in);
 	int userSymbol; //code is done by putting userSymbol as '1' and machine will put '2'
 	int i,j;
+	
+	
 	void getData() //get the initial data
 	{
 		System.out.println("Enter Which is your symbol either 1 or 2");
@@ -102,9 +104,7 @@ public class MainClass
 			int macMat[][]=emptyTileIndex(noOfZero);   //machine wil enter its symbol accoding to MIN-MAX algorithm
 			copyMachineInputToMat(macMat);
 		}
-		
-		//return macMat;
-		//displayMat(macMat);
+	
 	}
 	void copyMachineInputToMat(int temp[][])  //copy a temp matrix to original card or matrix
 	{
@@ -253,15 +253,10 @@ public class MainClass
 			}
 		}
 		
-		//System.out.print("Visited array:");
-		//displayVisited(visited);
 			int k=0;
 			while(k<noOfZero)
 			{
 				int myMat[][]=copyMat(mat);
-				//System.out.println("MyMAT");
-				//displayVisited(myMat);
-				//find the zero
 				int flag=0;
 				for(i=0;i<3;i++)
 				{
@@ -283,20 +278,10 @@ public class MainClass
 					}
 				}
 				
-				//System.out.print("Visited array:");
-				//displayVisited(visited);
 				myMat[i][j]=2;
-				//System.out.print("MyMat array:");
-				//displayVisited(myMat);
 				int PossWin_X=possibilityOfWinX(myMat);
-				//System.out.println("X poss:"+PossWin_X);
 				int possWin_Y=possibilityOfWinY(myMat);
-				//System.out.println("Y poss:"+possWin_Y);
 				int e=PossWin_X-possWin_Y;
-				//System.out.println("e:"+e);
-				
-			
-				
 				if(e>max)
 				{
 					finalMat=copyMat(myMat);
@@ -305,12 +290,6 @@ public class MainClass
 				k++;
 			}
 		
-		
-		
-		//MyComparator removed=pq.remove();
-		//finalMat=copyMat(removed.pqMat);
-		//System.out.print("final array:");
-		//displayVisited(finalMat);
 		return finalMat;
 		
 	}
@@ -342,8 +321,11 @@ public class MainClass
 		return res;
 	}
   
+  
+  
+  
 	int possibilityOfWinY(int mat[][])  //calculate possibily of Computer winning
-  {
+ 	 {
 		int res=0;
 		int flag=0;
 		for(int i=0;i<3;i++)
