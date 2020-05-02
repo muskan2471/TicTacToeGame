@@ -1,9 +1,5 @@
 # TicTacToe Game
-
-
 #Title : This programe is about Implement a Tic-Tac -Toe game in which user is going to play with computer by applying its Intelligent
-
-
 
 import java.util.*;
 public class MainClass 
@@ -12,7 +8,6 @@ public class MainClass
 	Scanner sc=new Scanner(System.in);
 	int userSymbol; //code is done by putting userSymbol as '1' and machine will put '2'
 	int i,j;
-	
 	
 	void getData() //get the initial data
 	{
